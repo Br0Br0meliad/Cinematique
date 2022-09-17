@@ -1,0 +1,8 @@
+body {
+
+}
+
+.film-app > .row{
+  overflow-x: auto;
+  flex-wrap:nowrap;
+}
