@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import FilmList from './components/FilmList';
-import NavBar from './components/NavBar';
+import Navigation from './components/NavBar';
 import SearchBar from './components/SearchBar';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 
 
@@ -13,14 +15,15 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
 
 
-  async function getFilms()  {
+  async function getFilms(searchValue)  {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=ce7b8a0`
 
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
-    setFilms(data.Search);
+    if (data.Search) {
+      setFilms(data.Search);
+    }
   };
 
   useEffect(()=> {
@@ -28,13 +31,13 @@ const App = () => {
   }, [searchValue]);
 
   return (
-  <div className='container-fluid film-app'>
-    <div className='row'>
-    <NavBar />
+  <Container className='film-app'>
+    <Row>
+    <Navigation />
     <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
     <FilmList films = {films} />
-    </div>
-  </div>
+    </Row>
+  </Container>
   );
 };
 

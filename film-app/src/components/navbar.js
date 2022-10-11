@@ -1,18 +1,19 @@
 import React from "react";
-import SearchBar from "./SearchBar";
+import NavBar from "react-bootstrap/Navbar";
+import Nav from 'react-bootstrap/Nav';
 
-function NavBar(props) {
+function Navigation() {
     return(
     <div className="navbar">
-    <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled">Disabled</a>
+    <div className="navbar-nav">
+        <a className="nav-link active" aria-current="page" href="#">Home</a>
+        <a className="nav-link" href="#">Features</a>
+        <a className="nav-link" href="#">Pricing</a>
+        <a className="nav-link disabled">Disabled</a>
     </div>
 
-<SearchBar />
+
 </div>)
 };
 
-export default NavBar;
+export default Navigation;

@@ -7,5 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Br0Br0meliad/Letterboxd-clone-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Br0Br0meliad/Letterboxd-clone-app/issues"
+  },
+  "homepage": "https://github.com/Br0Br0meliad/Letterboxd-clone-app#readme",
+  "dependencies": {
+    "react-bootstrap": "^2.5.0"
+  }
 }
